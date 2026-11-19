@@ -1,0 +1,16 @@
+
+Godot Engine v3.5.1.rc.custom_build.eb3b3546a - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon 780M Graphics
+Async. shader compilation: OFF
+ 
+PASS: При захвате машина не перескакивает
+PASS: Подъём проходит через промежуточную высоту
+PASS: Руки поднимаются над головой
+PASS: Пилот и костюм синхронны
+PASS: Выпуск машины совпадает с завершением толчка
+PASS: После броска руки плавно возвращаются
+PASS: Восстановлена боевая стойка
+PASS: Машина движется при выносе ноги вперёд
+PASS: После контакта босс не поворачивается за машиной
+PASS: Нога возвращается в стойку
+ANIMATION_CHECK_FAILURES=0

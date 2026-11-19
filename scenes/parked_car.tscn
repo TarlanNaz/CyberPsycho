@@ -1,0 +1,114 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scenes/parked_car.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.23, 0.49, 0.55, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+size = Vector3( 2.068, 0.7182, 5.244 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.095, 0.18, 0.23, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+size = Vector3( 1.782, 0.7847, 2.6562 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.34, 0.59, 0.64, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+material = SubResource( 5 )
+size = Vector3( 1.727, 0.1197, 1.7328 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.055, 0.063, 0.07, 1 )
+
+[sub_resource type="CylinderMesh" id=8]
+material = SubResource( 7 )
+top_radius = 0.4256
+bottom_radius = 0.4256
+height = 0.209
+radial_segments = 12
+rings = 1
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.99, 0.89, 0.62, 1 )
+
+[sub_resource type="CubeMesh" id=10]
+material = SubResource( 9 )
+size = Vector3( 0.462, 0.2261, 0.0399 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.84, 0.16, 0.12, 1 )
+
+[sub_resource type="CubeMesh" id=12]
+material = SubResource( 11 )
+size = Vector3( 0.462, 0.2261, 0.0399 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1.067, 0.51, 2.622 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.891, 0.3591, 1.3224 )
+
+[node name="Sedan" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Body" type="MeshInstance" parent="."]
+translation = Vector3( 0, 0.7581, 0 )
+mesh = SubResource( 2 )
+
+[node name="Cabin" type="MeshInstance" parent="."]
+translation = Vector3( 0, 1.33, -0.171 )
+mesh = SubResource( 4 )
+
+[node name="Roof" type="MeshInstance" parent="."]
+translation = Vector3( 0, 1.7423, -0.228 )
+mesh = SubResource( 6 )
+
+[node name="WheelLF" type="MeshInstance" parent="."]
+translation = Vector3( -1.001, 0.4256, -1.6302 )
+rotation_degrees = Vector3( 0, 0, 90 )
+mesh = SubResource( 8 )
+
+[node name="WheelLB" type="MeshInstance" parent="."]
+translation = Vector3( -1.001, 0.4256, 1.6302 )
+rotation_degrees = Vector3( 0, 0, 90 )
+mesh = SubResource( 8 )
+
+[node name="WheelRF" type="MeshInstance" parent="."]
+translation = Vector3( 1.001, 0.4256, -1.6302 )
+rotation_degrees = Vector3( 0, 0, 90 )
+mesh = SubResource( 8 )
+
+[node name="WheelRB" type="MeshInstance" parent="."]
+translation = Vector3( 1.001, 0.4256, 1.6302 )
+rotation_degrees = Vector3( 0, 0, 90 )
+mesh = SubResource( 8 )
+
+[node name="LampLF" type="MeshInstance" parent="."]
+translation = Vector3( -0.726, 0.8246, -2.622 )
+mesh = SubResource( 10 )
+
+[node name="LampLB" type="MeshInstance" parent="."]
+translation = Vector3( -0.726, 0.8246, 2.622 )
+mesh = SubResource( 12 )
+
+[node name="LampRF" type="MeshInstance" parent="."]
+translation = Vector3( 0.726, 0.8246, -2.622 )
+mesh = SubResource( 10 )
+
+[node name="LampRB" type="MeshInstance" parent="."]
+translation = Vector3( 0.726, 0.8246, 2.622 )
+mesh = SubResource( 12 )
+
+[node name="BodyCollider" type="CollisionShape" parent="."]
+translation = Vector3( 0, 0.6338, 0 )
+shape = SubResource( 13 )
+
+[node name="CabinCollider" type="CollisionShape" parent="."]
+translation = Vector3( 0, 1.4364, -0.171 )
+shape = SubResource( 14 )

@@ -1,0 +1,35 @@
+# Кэш импорта и локальные данные редактора Godot 3.x.
+/.import/
+/.godot/
+*.translation
+
+# Сборки: складывать экспорт в эти каталоги.
+/build/
+/builds/
+/dist/
+/export/
+/exports/
+
+# Автоматические резервные копии Blender; исходники .blend сохраняем.
+*.blend[0-9]*
+*.blend@
+
+# Генерируемые результаты проверок; скрипты и README сохраняем.
+/checks/*.log
+/checks/*.png
+
+# Локальные настройки IDE и файлы ОС.
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Локальные секреты и ключи подписи.
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.pfx
